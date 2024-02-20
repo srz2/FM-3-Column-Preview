@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --background-sedan: hsl(31, 77%, 52%);
+    --background-suv: hsl(184, 100%, 22%);
+    --background-luxary: hsl(179, 100%, 13%);
+    --text-description: hsla(0, 0%, 100%, 0.75);
+    --non-white-white-bg: hsl(0, 0%, 95%);
+    --border-radius-container: 7px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*   font-family: "Big Shoulders Display", sans-serif; */
+/*   font-family: "Lexend Deca", sans-serif; */
+
+.container {
+    display: flex;
+    margin: 7rem 10%;
+}
+
+.container .card:first-child {
+    border-radius: var(--border-radius-container) 0 0 var(--border-radius-container);
+}
+
+.container .card:last-child {
+    border-radius: 0 var(--border-radius-container) var(--border-radius-container) 0;
+}
+
+.card {
+    color: white;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 25px 0;
+}
+
+.card .card-container {
+    margin: 10px 30px;
+}
+
+.card img {
+    transform: scale(0.75);
+}
+
+.card h1 {
+    color: var(--non-white-white-bg);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--text-description);
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 25px;
+    height: 100px;
+}
+
+.card-sedan {
+    background-color: var(--background-sedan);
+}
+
+.card-sedan button {
+    color: var(--background-sedan);
+}
+
+.card-sedan button:hover {
+    background-color: var(--background-sedan);
+}
+
+.card-suv {
+    background-color: var(--background-suv);
+}
+
+.card-suv button {
+    color: var(--background-suv);
+}
+
+.card-suv button:hover {
+    background-color: var(--background-suv);
+}
+
+.card-luxury {
+    background-color: var(--background-luxary);
+}
+
+.card-luxury button {
+    color: var(--background-luxary);
+}
+
+.card-luxury button:hover {
+    background-color: var(--background-luxary);
+}
+
+.card button {
+    background-color: var(--non-white-white-bg);
+    margin-top: 55px;
+    padding: 10px 25px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card button:hover {
+    color: var(--non-white-white-bg);
+    border: 1px var(--non-white-white-bg) solid;
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .card:first-child {
+        border-radius: var(--border-radius-container) var(--border-radius-container) 0 0;
+    }
+    
+    .container .card:last-child {
+        border-radius: 0 0 var(--border-radius-container) var(--border-radius-container);
+    }
+  }
